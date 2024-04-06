@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://c1.wallpaperflare.com/preview/601/1011/798/people-travel-adventure-silhouette.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ed7163;
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.05); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        button.yes {
+            background-color: #5cb85c;
+        }
+
+        button.no {
+            background-color: #d9534f;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .option {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .option:hover {
+            transform: scale(1.1);
+        }
+
+        .option img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            height: 150px;
+        }
+
+        .option p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm planning a day out. Would you like to come along?"</h1>
+        <p>Life is too short to miss out on adventures...</p>
+        <button class="yes" onclick="showOptions()">Yes, I'd love to!</button>
+        <button class="no" onclick="showSadResponse()">No 😔</button>
+        <div class="options" id="options" style="display: none;">
+            <div class="option" style="background-color: #76ade8d5;">
+                <a href="https://wa.me/+918279217976/?text=Hey! I'd love to go to the water park with you. Are you in?"><img src="https://images1.wionews.com/images/wion/900x1600/2023/4/25/1682432194602_WOnderlaPortrait.jpg" alt="Water Park"></a>
+                <p>Water Park</p>
+            </div>
+            <div class="option" style="background-color: #bdad1ed6;">
+                <a href="https://wa.me/+918279217976/?text=Hey! Let's go bowling together. What do you say?"><img src="https://i.pinimg.com/736x/ce/59/ab/ce59ab6025b7602f6588dfdfb4ddd7aa.jpg" alt="Bowling"></a>
+                <p>Bowling</p>
+            </div>
+            <div class="option" style="background-color: #b39ddbcc;">
+                <a href="https://wa.me/+918279217976/?text=Hi! How about we go rock climbing this weekend?"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIzQDRTzr5Axzai8cqn5-bOKwd2g_sW9AyBTUpEeRijA&s" alt="Rock Climbing"></a>
+                <p>Rock Climbing</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showOptions() {
+            document.getElementById("options").style.display = "flex";
+        }
+
+        function showSadResponse() {
+            alert("It's okay, I understand. Maybe some other time 😔");
+        }
+    </script>
+</body>
+</html>
